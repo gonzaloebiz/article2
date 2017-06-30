@@ -36,7 +36,7 @@ define([
                     $.each(data , function(i,item) {
                         $('#article2_general_color').append($('<option>', {
                             value: item.id,
-                            text : item.label
+                            text : item.value
                         }));
                     });
                 });

@@ -4,10 +4,14 @@ namespace Gonzalezuy\Article2\Helper;
 
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
+    const TRIANGLE = 'Triangle';
+    const CIRCLE = 'Circle';
+    const SQUARE = 'Square';
     public function getColors($shape=null)
     {
+
         switch($shape) {
-            case 'triangle':
+            case self::TRIANGLE:
                 $r = [
                     ['id'=>'black','value'=>'Black'],
                     ['id'=>'blue','value'=>'Blue'],
@@ -15,7 +19,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
                     ['id'=>'green','value'=>'Green'],
                 ];
                 break;
-            case 'circle':
+            case self::CIRCLE:
                 $r = [
                     ['id'=>'blue','value'=>'Blue'],
                     ['id'=>'brown','value'=>'Brown'],
@@ -23,7 +27,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
                     ['id'=>'white','value'=>'White'],
                 ];
                 break;
-            case 'square':
+            case self::SQUARE:
                 $r = [
                     ['id'=>'black','value'=>'Black'],
                     ['id'=>'brown','value'=>'Brown'],
