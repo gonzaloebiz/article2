@@ -45,8 +45,8 @@ cp src/composer.json .
 sed -i "s/\"\"/\"src\/\"/g" composer.json
 sed -i "s/registration\.php/src\/registration\.php/g" composer.json
 # if you use MacOs uncomment the next 3 lines
-#sed -i "s/\"\"/\"src\/\"/g" composer.json
-#sed -i "s/registration\.php/src\/registration\.php/g" composer.json
+#sed -i.bak "s/\"\"/\"src\/\"/g" composer.json
+#sed -i.bak "s/registration\.php/src\/registration\.php/g" composer.json
 #rm composer.json.bak
 zip -qr $owner'_'$repo'-'$tag.zip src composer.json
 rm -rf src composer.json
