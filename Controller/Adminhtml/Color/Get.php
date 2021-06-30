@@ -30,7 +30,6 @@ class Get extends Action
         $this->_helper  = $helper;
         $this->_resultFactory = $resultFactory;
     }
-
     public function execute()
     {
         $params = $this->getRequest()->getParams();
@@ -41,10 +40,12 @@ class Get extends Action
         return $resultJson;
 
     }
+    /**
+     * @return bool
+     */
     protected function _isAllowed()
     {
         return true;
-//        return $this->_authorization->isAllowed('Gonzalezuy_Article2::stores_edit');
     }
 
 }
